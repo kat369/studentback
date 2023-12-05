@@ -1,7 +1,19 @@
 import mongoose from "mongoose";
 const HomeSchema = new mongoose.Schema(
   {
-    callmonthstart: {
+    name: {
+      type: String,
+    },
+    class: {
+      type: String,
+    },
+    gender: {
+      type: String,
+    },
+    card: {
+      type: String,
+    },
+    attendance: {
       type: String,
     },
 

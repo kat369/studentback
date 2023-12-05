@@ -8,8 +8,13 @@ db();
 
 const app = express();
 
+import bodyParser from "body-parser";
+
+
+app.use(bodyParser.urlencoded({limit:'30mb',extended:true}));
+app.use(bodyParser.json({limit:'30mb',extended:true}));
 app.use(cors());
-const PORT = 4000;
+const PORT = 3002;
 
 app.get("/server-admin", function (request, response) {
   response.send("Welcome to the Student Admin server");
